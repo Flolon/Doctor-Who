@@ -29,6 +29,8 @@ function loadSeasonPagination(type = "season"){
     
 }
 
+document.getElementById("season-year").innerHTML = episodeJson[S]["E1"]["year"];
+
 function loadSeasonPageTitle(){
     document.title = "Doctor Who - Season "+seasonNum;
 }

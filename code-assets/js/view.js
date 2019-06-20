@@ -24,5 +24,5 @@ function loadEpisode(){
 }
 
 function loadViewPageTitle(){
-    document.title = "Doctor Who - "+episodeTitle+" [S"+seasonNum+" E"+episodeNum+"]";
+    document.title = "Doctor Who - "+episodeTitle+" - [S"+seasonNum+" E"+episodeNum+"]";
 }
