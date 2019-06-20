@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Doctor Who - Season </title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.5/css/bulma.css" />
+<link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet'>
+<link rel="stylesheet" href="/code-assets/css/global.css" />
+</head>
+<body>
+  
+<nav class="navbar is-dark" role="navigation" aria-label="main navigation">
+  <div class="navbar-brand">
+    <a class="navbar-item" href="/">
+      <img src="/code-assets/logos/new-text-orange.png" alt="DW" height="28">
+    </a>
+  </div>
+</nav>
+
+<div class="container is-fluid" style="padding:8px">
+    
+    <div style="display: block; margin-right:auto; margin-left: auto; width:90%;">
+        
+        <h1 class="is-size-3 has-text-light show-title">Season <span id="season-num"></span></h1>
+        
+        <div style="margin:0 0 1rem 0;">
+          <a class="pagination-previous has-text-white-bis" title="Back Season" id="back-season" href="/">&lt;</a>
+          <a class="pagination-next has-text-white-bis" title="Forward Season" id="forward-season" href="/">&gt;</a>
+        </div>
+        
+        <div id="episode-grid" class="has-text-light">
+            <progress class="progress is-small is-warning" max="100">85%</progress>
+        </div>
+        
+    </div>
+    
+
+</div><!-- end container -->
+<script src="/code-assets/js/global.js"></script>
+<script src="/code-assets/js/episodes.js"></script>
+<script src="/code-assets/js/season.js"></script>
+<script>
+loadEpisodeGrid();    
+loadSeasonPagination();
+loadSeasonPageTitle();
+</script>
+</body>
+</html>

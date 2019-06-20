@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Doctor Who</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.5/css/bulma.css" />
+<link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet'>
+<link rel="stylesheet" href="/code-assets/css/global.css" />
+</head>
+<body>
+  
+<nav class="navbar is-dark" role="navigation" aria-label="main navigation">
+  <div class="navbar-brand">
+    <a class="navbar-item" href="/">
+      <img src="/code-assets/logos/new-text-orange.png" alt="DW" height="28">
+    </a>
+  </div>
+</nav>
+
+<div class="container is-fluid" style="padding:8px">
+    
+    <div style="display: block; margin-right:auto; margin-left: auto; width:90%;">
+        
+    <video src="#" id="episode-video" controls><h1 class="has-text-white">Opps...</h1></video>
+    
+    <h2 class="is-size-3 has-text-white" id="episode-title">Loading Title...</h2>
+        <p class="has-text-grey-light"><span id="episode-info"></span> | Year: <span id="episode-year"></span></p>
+    
+        <!-- seasons -->
+        
+        <h1 class="is-size-4 has-text-light show-title">Season <span id="season-num">Loading...</span></h1>
+        <div>
+            <a class="is-small navLink has-text-white-bis" title="Back Season" id="back-season" href="/">&lt;</a>
+            <a class="is-small navLink has-text-white-bis" title="Forward Season" id="forward-season" href="/">&gt;</a>
+        </div>
+        
+        <div id="episode-grid" class="has-text-light">
+            
+        </div>
+        
+    </div>
+    
+</div><!-- end container -->
+    <br />
+<script src="/code-assets/js/global.js"></script>
+<script src="/code-assets/js/episodes.js"></script>
+<script src="/code-assets/js/view.js"></script>
+<script src="/code-assets/js/season.js"></script>
+<script>
+loadEpisodeGrid();
+loadEpisode();
+loadViewPageTitle();
+loadSeasonPagination("view");
+</script>
+</body>
+</html>
