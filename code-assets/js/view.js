@@ -26,3 +26,26 @@ function loadEpisode(){
 function loadViewPageTitle(){
     document.title = "Doctor Who - "+episodeTitle+" - [S"+seasonNum+" E"+episodeNum+"]";
 }
+// Autoplay //
+function enableAutoplay() {
+    localStorage.setItem("autoplay", 1);
+    episodeVideo.autoplay = true;
+    episodeVideo.load();
+}
+
+function disableAutoplay() {
+    localStorage.setItem("autoplay", 0);
+    episodeVideo.autoplay = false;
+    episodeVideo.load();
+}
+function getSettingAutoplay(){
+    var autoplay = localStorage.getItem("autoplay");
+    if(autoplay == 0){
+        disableAutoplay();
+    }else if(autoplay == 1){
+        enableAutoplay();
+    }else{
+        console.log("SETTINGS: Autoplay is not set");
+        enableAutoplay();
+    }
+}

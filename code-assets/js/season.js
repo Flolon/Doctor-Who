@@ -12,6 +12,8 @@ function loadSeasonPagination(type = "season"){
     if(type == "view"){
         rootLink = "/view/?S=";
         endLink = "&E=1";
+    }else if(type == "season"){
+        document.getElementById("season-year").innerHTML = episodeJson[S]["E1"]["year"];
     }
     
     if(backSeason == 0){
@@ -28,8 +30,6 @@ function loadSeasonPagination(type = "season"){
     }
     
 }
-
-document.getElementById("season-year").innerHTML = episodeJson[S]["E1"]["year"];
 
 function loadSeasonPageTitle(){
     document.title = "Doctor Who - Season "+seasonNum;

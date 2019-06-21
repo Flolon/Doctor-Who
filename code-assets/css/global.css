@@ -6,6 +6,9 @@ body{
     min-height: 100vh;
     background-color: #505050;
 }
+video{
+    outline: none;
+}
 .show-title{
     margin: 1rem 0 .5rem 0;
 }

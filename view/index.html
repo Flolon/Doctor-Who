@@ -27,6 +27,11 @@
     <h2 class="is-size-3 has-text-white" id="episode-title">Loading Title...</h2>
         <p class="has-text-grey-light"><span id="episode-info"></span> | Year: <span id="episode-year"></span></p>
     
+        <div>
+            <button onclick="enableAutoplay()" type="button">Enable autoplay</button>
+            <button onclick="disableAutoplay()" type="button">Disable autoplay</button>
+        </div>
+        
         <!-- seasons -->
         
         <h1 class="is-size-4 has-text-light show-title">Season <span id="season-num">Loading...</span></h1>
@@ -52,6 +57,7 @@ loadEpisodeGrid();
 loadEpisode();
 loadViewPageTitle();
 loadSeasonPagination("view");
+getSettingAutoplay();
 </script>
 </body>
 </html>
