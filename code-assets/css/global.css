@@ -15,8 +15,8 @@ video{
 .show-tile{
     line-height: 0;
     display: inline-block;
-    min-height: 200px;
-    min-width: 200px;
+    min-height: 175px;
+    min-width: 175x;
     color:#ededed;
     background-color: #7e7e7e;
     position: relative;
@@ -29,6 +29,7 @@ video{
     perspective-origin: 50% 50%;
     transform-style: preserve-3d;
     z-index: 1;
+    margin:0 5px 5px 0;
 }
 .show-tile:hover {
     transform: scale(1.02);
@@ -42,7 +43,7 @@ video{
 }
 .show-tile img{
     display: inline-block;
-    height: 200px;
+    height: 175px;
 }
 .show-badge{
     display: inline-block;
@@ -110,4 +111,28 @@ video{
 }
 .navLink:focus{
     border: 1px solid hsl(48, 100%, 67%);
+}
+
+
+
+
+
+/* MEDIA Q */
+@media only screen and (min-width: 1325px){
+    .show-tile{
+        min-height: 200px;
+        min-width: 200px;
+    }
+    .show-tile img{
+        height: 200px;
+    }
+}
+@media only screen and (min-width: 1350px){
+    .show-tile{
+        min-height: 210px;
+        min-width: 210px;
+    }
+    .show-tile img{
+        height: 210px;
+    }
 }
