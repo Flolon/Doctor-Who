@@ -46,16 +46,18 @@ function getSettingAutoplay(){
     var autoplay = localStorage.getItem("autoplay");
     if(autoplay == 0){
         disableAutoplay();
-        document.getElementById("autoplay-btn-enable").style.display = "";
-        document.getElementById("autoplay-btn-disable").style.display = "none";
     }else if(autoplay == 1){
         enableAutoplay();
-        document.getElementById("autoplay-btn-enable").style.display = "none";
-        document.getElementById("autoplay-btn-disable").style.display = "";
     }else{
         console.log("SETTINGS: Autoplay is not set");
         enableAutoplay();
-        document.getElementById("autoplay-btn-enable").style.display = "none";
-        document.getElementById("autoplay-btn-disable").style.display = "";
     }
+}
+function toggleSettingsMenu(){
+      var x = document.getElementById("settings-menu");
+      if (x.style.display === "none") {
+        x.style.display = "";
+      } else {
+        x.style.display = "none";
+      }
 }

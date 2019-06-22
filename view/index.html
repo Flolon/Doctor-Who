@@ -7,6 +7,7 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.5/css/bulma.css" />
 <link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet'>
 <link rel="stylesheet" href="/code-assets/css/global.css" />
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 </head>
 <body>
   
@@ -27,11 +28,23 @@
     <h2 class="is-size-3 has-text-white" id="episode-title">Loading Title...</h2>
         <p class="has-text-grey-light"><span id="episode-info"></span> | Year: <span id="episode-year"></span></p>
     
-        <div style="margin-top:1rem;display: inline-block;padding:4px;border: 1px solid white;border-radius: 3px">
-            <h3 class="is-size-6 has-text-white-bis" style="margin:0 0 .25rem 0;text-align: center">Page Autoplay</h3>
-            <button onclick="enableAutoplay()" type="button" id="autoplay-btn-enable">Enable</button>
-            <button onclick="disableAutoplay()" type="button" id="autoplay-btn-disable">Disable</button>
-            <hr style="margin:.5rem 0;" />
+        <a onclick="toggleSettingsMenu()" class="settings-btn is-dark"><i class="material-icons has-text-grey-light">settings</i></a>
+        
+        <div>
+            <div class="settings" id="settings-menu" style="display: none"><!--settings-->
+                <h3 class="is-size-5 settings-title">Settings</h3>
+                
+                <hr style="margin:.25rem 0 .5rem 0;" />
+                
+                <p class="settings-title" >Page autoplay</p>
+
+                <center style="margin-bottom: .5rem">
+                    <button class="button is-small is-dark has-background-black-ter" onclick="enableAutoplay();toggleSettingsMenu();" id="autoplay-btn-enable">Enable</button>
+                    <button class="button is-small is-dark has-background-black-ter" onclick="disableAutoplay();toggleSettingsMenu();" id="autoplay-btn-disable">Disable</button>
+                </center>
+
+                <!--<hr style="margin:.5rem 0;" />-->
+            </div><!--/settings-->
         </div>
         
         

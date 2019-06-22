@@ -10,7 +10,7 @@ video{
     outline: none;
 }
 .show-title{
-    margin: 1rem 0 .5rem 0;
+    margin: .65rem 0 .5rem 0;
 }
 .show-tile{
     line-height: 0;
@@ -112,7 +112,40 @@ video{
 .navLink:focus{
     border: 1px solid hsl(48, 100%, 67%);
 }
-
+.settings{
+    margin-top:.0;
+    display: inline-block;
+    position: absolute;
+    padding:4px 12px;
+    background-color: rgba(90, 90, 90, 0.9);
+    border: 1px solid #959595;
+    border-radius: 4px;
+    z-index: 100;
+}
+.settings-title{
+    margin:0 0 .25rem 0;
+    text-align: center;
+    color:#f8f8f8;
+}
+.settings hr{
+    background-color: #939393 !important;
+}
+.settings .button{
+    
+}
+.settings-btn{
+    display: inline-block;
+    position: relative;
+    margin:.5rem 0 .25rem 0;
+    background-color: #717171;
+    padding: 5px 8px;
+    border-radius: 3px;
+    line-height: 0;
+}
+.settings-btn i{
+    vertical-align: middle;
+    font-size: 15px
+}
 
 
 
