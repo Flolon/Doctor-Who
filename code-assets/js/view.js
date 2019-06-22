@@ -31,21 +31,31 @@ function enableAutoplay() {
     localStorage.setItem("autoplay", 1);
     episodeVideo.autoplay = true;
     episodeVideo.load();
+    document.getElementById("autoplay-btn-enable").style.display = "none";
+    document.getElementById("autoplay-btn-disable").style.display = "";
 }
 
 function disableAutoplay() {
     localStorage.setItem("autoplay", 0);
     episodeVideo.autoplay = false;
     episodeVideo.load();
+    document.getElementById("autoplay-btn-enable").style.display = "";
+    document.getElementById("autoplay-btn-disable").style.display = "none";
 }
 function getSettingAutoplay(){
     var autoplay = localStorage.getItem("autoplay");
     if(autoplay == 0){
         disableAutoplay();
+        document.getElementById("autoplay-btn-enable").style.display = "";
+        document.getElementById("autoplay-btn-disable").style.display = "none";
     }else if(autoplay == 1){
         enableAutoplay();
+        document.getElementById("autoplay-btn-enable").style.display = "none";
+        document.getElementById("autoplay-btn-disable").style.display = "";
     }else{
         console.log("SETTINGS: Autoplay is not set");
         enableAutoplay();
+        document.getElementById("autoplay-btn-enable").style.display = "none";
+        document.getElementById("autoplay-btn-disable").style.display = "";
     }
 }

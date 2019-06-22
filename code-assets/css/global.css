@@ -119,20 +119,20 @@ video{
 
 /* MEDIA Q */
 @media only screen and (min-width: 1325px){
-    .show-tile{
+    .show-tile.season{
         min-height: 200px;
         min-width: 200px;
     }
-    .show-tile img{
+    .show-tile.season img{
         height: 200px;
     }
 }
 @media only screen and (min-width: 1350px){
-    .show-tile{
+    .show-tile.season{
         min-height: 210px;
         min-width: 210px;
     }
-    .show-tile img{
+    .show-tile.season img{
         height: 210px;
     }
 }
