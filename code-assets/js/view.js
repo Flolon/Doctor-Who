@@ -17,6 +17,7 @@ function loadEpisode(){
     
     episodeTitleEle.innerHTML = episodeTitle;
     episodeVideo.src = episodeJson[S][E]["src"];
+    episodeVideo.poster = '/doctorwho/code-assets/images/thumbnails/'+S+'-'+E+'.jpg';
     
     episodeInfo = "Season "+seasonNum+" Episode "+episodeNum;
     episodeInfoEle.innerHTML = episodeInfo;

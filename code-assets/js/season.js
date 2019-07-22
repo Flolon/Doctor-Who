@@ -6,11 +6,11 @@ function loadSeasonPagination(type = "season"){
     var backSeason = parseInt(seasonNum) - 1;
     var fowardSeason = parseInt(seasonNum) + 1;
     
-    var rootLink = "/season/?S=";
+    var rootLink = "/doctorwho/season/?S=";
     var endLink = "";
     
     if(type == "view"){
-        rootLink = "/view/?S=";
+        rootLink = "/doctorwho/view/?S=";
         endLink = "&E=1";
     }else if(type == "season"){
         document.getElementById("season-year").innerHTML = episodeJson[S]["E1"]["year"];

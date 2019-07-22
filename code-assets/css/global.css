@@ -6,8 +6,20 @@ body{
     min-height: 100vh;
     background-color: #505050;
 }
+.video-container{
+    background-color: #151515;
+    width: 100%;
+}
 video{
     outline: none;
+}
+#episode-video{
+    display: block;
+    margin-right:auto;
+    margin-left:auto
+}
+@media only screen and (max-width: 600px) {
+    
 }
 .show-title{
     margin: .65rem 0 .5rem 0;
@@ -81,12 +93,6 @@ video{
     color:#ffffff;
     display:block;
     padding:6px 8px 5px 8px;
-}
-#episode-video{
-    display: block;
-    width:100%;
-    margin-right:auto;
-    margin-left:auto
 }
 #episode-title{
     margin-top:1rem;
