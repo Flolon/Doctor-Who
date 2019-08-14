@@ -28,7 +28,7 @@ video{
     line-height: 0;
     display: inline-block;
     min-height: 175px;
-    min-width: 311px;
+    min-width: 175px;
     color:#ededed;
     background-color: #7e7e7e;
     position: relative;
@@ -53,9 +53,10 @@ video{
     z-index: 2;
     box-shadow: none;
 }
-.show-tile img{
+.show-tile img {
     display: inline-block;
     height: 175px;
+    min-width: 311px;
 }
 .show-badge{
     display: inline-block;
