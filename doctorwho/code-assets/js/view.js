@@ -27,6 +27,36 @@ function loadEpisode(){
 function loadViewPageTitle(){
     document.title = "Doctor Who - "+episodeTitle+" - [S"+seasonNum+" E"+episodeNum+"]";
 }
+
+// Episode Pagination //
+function loadEpisodePagination(){
+    
+    var back = document.getElementById("back-episode");
+    var forward = document.getElementById("forward-episode");
+    
+    var backEpisode = parseInt(episodeNum) - 1;
+    var fowardEpisode = parseInt(episodeNum) + 1;
+    var fowardSeason = parseInt(seasonNum) + 1;
+    var backSeason = parseInt(seasonNum) - 1;
+    
+    var rootLink = "/doctorwho/view/?S="+seasonNum+"&E=";
+    var endLink = "";
+    
+    if(backEpisode == 0){
+        back.href = "/doctorwho/view/?S="+backSeason+"&E="+episodesInSeasonNum;
+        forward.href = rootLink+fowardEpisode+endLink;
+        
+    }else if(fowardEpisode > episodesInSeasonNum){
+        back.href = rootLink+backEpisode+endLink;
+        forward.href = "/doctorwho/view/?S="+fowardSeason+"&E=1";
+        
+    }else{
+        back.href = rootLink+backEpisode+endLink;
+        forward.href = rootLink+fowardEpisode+endLink;
+    }
+    
+}
+
 // Autoplay //
 function enableAutoplay() {
     localStorage.setItem("autoplay", 1);

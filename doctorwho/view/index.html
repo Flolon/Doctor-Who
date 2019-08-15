@@ -26,7 +26,11 @@
         <div class="video-container">
             <video src="#" id="episode-video" controls><h1 class="has-text-white">Opps...</h1></video>
         </div>
-
+        
+        <div class="episode-links">
+            <a id="back-episode" class="episode-link" href="#" title="Back Episode">&lt;</a><a id="forward-episode" class="episode-link" href="#" title="Forward Episode">&gt;</a>
+        </div>
+        
         <h2 class="is-size-3 has-text-white" id="episode-title">Loading Title...</h2>
             <p class="has-text-grey-light"><span id="episode-info"></span> | Year: <span id="episode-year"></span></p>
 
@@ -75,6 +79,7 @@ loadEpisodeGrid();
 loadEpisode();
 loadViewPageTitle();
 loadSeasonPagination("view");
+loadEpisodePagination();
 window.onload = getSettingAutoplay();
 </script>
 </body>

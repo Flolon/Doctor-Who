@@ -98,13 +98,28 @@ video{
     padding:6px 8px 5px 8px;
 }
 #episode-title{
-    margin-top:1rem;
+    margin-top:.5rem;
+}
+.episode-links{
+    color:#7b7b7b;
+    margin: .5rem 0 0 0;
+}
+.episode-link {
+    color: #aaa;
+    padding: 2px 7px;
+    margin:0 5px 0 0;
+    border: 1px solid #7b7b7b;
+    border-radius: 3px;
+}
+.episode-link:hover,.episode-link:active {
+    color: #747474;
+    border: 1px solid #747474;
 }
 .pagination-next:focus{
     border: 1px solid hsl(48, 100%, 67%);
 }
 .pagination-next:active{
-    border: 1px solid hsl(48, 100%, 67%);
+    border: 1px solid hsl(48, 55%, 54%);
 }
 .navLink{
     display: inline-block;
