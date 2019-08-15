@@ -56,39 +56,3 @@ function loadEpisodePagination(){
     }
     
 }
-
-// Autoplay //
-function enableAutoplay() {
-    localStorage.setItem("autoplay", 1);
-    episodeVideo.autoplay = true;
-    episodeVideo.load();
-    document.getElementById("autoplay-btn-enable").style.display = "none";
-    document.getElementById("autoplay-btn-disable").style.display = "";
-}
-
-function disableAutoplay() {
-    localStorage.setItem("autoplay", 0);
-    episodeVideo.autoplay = false;
-    episodeVideo.load();
-    document.getElementById("autoplay-btn-enable").style.display = "";
-    document.getElementById("autoplay-btn-disable").style.display = "none";
-}
-function getSettingAutoplay(){
-    var autoplay = localStorage.getItem("autoplay");
-    if(autoplay == 0){
-        disableAutoplay();
-    }else if(autoplay == 1){
-        enableAutoplay();
-    }else{
-        console.log("SETTINGS: Autoplay is not set");
-        enableAutoplay();
-    }
-}
-function toggleSettingsMenu(){
-      var x = document.getElementById("settings-menu");
-      if (x.style.display === "none") {
-        x.style.display = "";
-      } else {
-        x.style.display = "none";
-      }
-}

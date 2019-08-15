@@ -48,6 +48,15 @@
                         <button class="button is-small is-dark has-background-black-ter" onclick="enableAutoplay();toggleSettingsMenu();" id="autoplay-btn-enable">Enable</button>
                         <button class="button is-small is-dark has-background-black-ter" onclick="disableAutoplay();toggleSettingsMenu();" id="autoplay-btn-disable">Disable</button>
                     </center>
+                    
+                    <hr style="margin:.25rem 0 .5rem 0;" />
+
+                    <p class="settings-title" >Episode List</p>
+
+                    <center style="margin-bottom: .5rem">
+                        <button class="button is-small is-dark has-background-black-ter" onclick="toggleEpisodeGridType('wide');toggleSettingsMenu();" id="episode-grid-type-wide">Wide</button>
+                        <button class="button is-small is-dark has-background-black-ter" onclick="toggleEpisodeGridType('normal');toggleSettingsMenu();" id="episode-grid-type-normal">Normal</button>
+                    </center>
 
                     <!--<hr style="margin:.5rem 0;" />-->
                 </div><!--/settings-->
@@ -75,12 +84,12 @@
 <script src="/doctorwho/code-assets/js/view.js"></script>
 <script src="/doctorwho/code-assets/js/season.js"></script>
 <script>
-loadEpisodeGrid();
+getSettingEpisodeGrid();
 loadEpisode();
 loadViewPageTitle();
 loadSeasonPagination("view");
 loadEpisodePagination();
-window.onload = getSettingAutoplay();
+window.onload = getSettingAutoplay("view");
 </script>
 </body>
 </html>

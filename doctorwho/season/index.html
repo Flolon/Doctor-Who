@@ -7,6 +7,7 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.5/css/bulma.css" />
 <link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet'>
 <link rel="stylesheet" href="/doctorwho/code-assets/css/global.css" />
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 </head>
 <body>
   
@@ -25,13 +26,44 @@
         <h1 class="is-size-3 has-text-light show-title" style="margin:1rem 0 0 0;">Season <span id="season-num"></span></h1>
         <p class="has-text-grey-light" style="margin:0 0 .5rem 0;">Year: <span id="season-year"></span></p>
         
-        <div style="margin:0 0 .5rem 0;">
+        <div style="margin:0 0 0 0;">
             <a class="is-small navLink has-text-white-bis" title="Back Season" id="back-season" href="/doctorwho/">&lt;</a>
             <a class="is-small navLink has-text-white-bis" title="Forward Season" id="forward-season" href="/doctorwho/">&gt;</a>
         </div>
         
+        <div style="margin:0 0 .75rem 0;">
+        <a onclick="toggleSettingsMenu()" class="settings-btn is-dark"><i class="material-icons has-text-grey-light">settings</i></a>
+
+            <div>
+                <div class="settings" id="settings-menu" style="display: none"><!--settings-->
+                    <h3 class="is-size-5 settings-title">Settings</h3>
+
+                    <hr style="margin:.25rem 0 .5rem 0;" />
+
+                    <p class="settings-title" >Page autoplay</p>
+
+                    <center style="margin-bottom: .5rem">
+                        <button class="button is-small is-dark has-background-black-ter" onclick="enableAutoplay();toggleSettingsMenu();" id="autoplay-btn-enable">Enable</button>
+                        <button class="button is-small is-dark has-background-black-ter" onclick="disableAutoplay();toggleSettingsMenu();" id="autoplay-btn-disable">Disable</button>
+                    </center>
+                    
+                    <hr style="margin:.25rem 0 .5rem 0;" />
+
+                    <p class="settings-title" >Episode List</p>
+
+                    <center style="margin-bottom: .5rem">
+                        <button class="button is-small is-dark has-background-black-ter" onclick="toggleEpisodeGridType('wide');toggleSettingsMenu();" id="episode-grid-type-wide">Wide</button>
+                        <button class="button is-small is-dark has-background-black-ter" onclick="toggleEpisodeGridType('normal');toggleSettingsMenu();" id="episode-grid-type-normal">Normal</button>
+                    </center>
+
+                    <!--<hr style="margin:.5rem 0;" />-->
+                </div><!--/settings-->
+            </div>
+        </div>
+        
         <div id="episode-grid" class="has-text-light">
             <progress class="progress is-small is-warning" max="100">85%</progress>
+            
         </div>
         
     </div>
@@ -43,9 +75,10 @@
 <script src="/doctorwho/code-assets/js/episodes.js"></script>
 <script src="/doctorwho/code-assets/js/season.js"></script>
 <script>
-loadEpisodeGrid();    
+getSettingEpisodeGrid(); 
 loadSeasonPagination();
 loadSeasonPageTitle();
+window.onload = getSettingAutoplay("season");
 </script>
 </body>
 </html>
