@@ -9,9 +9,9 @@ function loadEpisodeGrid(type){
         var E = "E"+i;
         //episodeGrid.innerHTML += episodeJson.S1[E];
         if(type == "wide"){
-            episodeGrid.innerHTML += '<div title="'+episodeJson[S][E]["title"]+'"> <a href="/doctorwho/view/?S='+seasonNum+'&E='+i+'" class="show-wide"> <span class="wide-ep-badge">E'+i+'</span> <img src="/doctorwho/code-assets/images/thumbnails/S'+seasonNum+'-E'+i+'.jpg"> <span class="wide-ep-title">'+episodeJson[S][E]["title"]+'</span> </a> </div>';
+            episodeGrid.innerHTML += '<div title="'+episodeJson[S][E]["title"]+'"> <a href="view.html?S='+seasonNum+'&E='+i+'" class="show-wide"> <span class="wide-ep-badge">E'+i+'</span> <img src="code-assets/images/thumbnails/S'+seasonNum+'-E'+i+'.jpg"> <span class="wide-ep-title">'+episodeJson[S][E]["title"]+'</span> </a> </div>';
         }else{
-            episodeGrid.innerHTML += '<div style="display:inline-block;" title="'+episodeJson[S][E]["title"]+'"> <a href="/doctorwho/view/?S='+seasonNum+'&E='+i+'" class="show-tile"> <span class="ep-badge">E'+i+'</span> <img src="/doctorwho/code-assets/images/thumbnails/S'+seasonNum+'-E'+i+'.jpg"> <span class="title-badge">'+episodeJson[S][E]["title"]+'</span> </a> </div>';
+            episodeGrid.innerHTML += '<div style="display:inline-block;" title="'+episodeJson[S][E]["title"]+'"> <a href="view.html?S='+seasonNum+'&E='+i+'" class="show-tile"> <span class="ep-badge">E'+i+'</span> <img src="code-assets/images/thumbnails/S'+seasonNum+'-E'+i+'.jpg"> <span class="title-badge">'+episodeJson[S][E]["title"]+'</span> </a> </div>';
         }
     }
 

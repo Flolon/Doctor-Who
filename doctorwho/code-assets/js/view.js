@@ -17,7 +17,7 @@ function loadEpisode(){
     
     episodeTitleEle.innerHTML = episodeTitle;
     episodeVideo.src = episodeJson[S][E]["src"];
-    episodeVideo.poster = '/doctorwho/code-assets/images/thumbnails/'+S+'-'+E+'.jpg';
+    episodeVideo.poster = 'code-assets/images/thumbnails/'+S+'-'+E+'.jpg';
     
     episodeInfo = "Season "+seasonNum+" Episode "+episodeNum;
     episodeInfoEle.innerHTML = episodeInfo;
@@ -38,17 +38,18 @@ function loadEpisodePagination(){
     var fowardEpisode = parseInt(episodeNum) + 1;
     var fowardSeason = parseInt(seasonNum) + 1;
     var backSeason = parseInt(seasonNum) - 1;
+    var episodesInLastSeasonNum = Object.keys(episodeJson["S"+backSeason]).length;
     
-    var rootLink = "/doctorwho/view/?S="+seasonNum+"&E=";
+    var rootLink = "view.html?S="+seasonNum+"&E=";
     var endLink = "";
     
     if(backEpisode == 0){
-        back.href = "/doctorwho/view/?S="+backSeason+"&E="+episodesInSeasonNum;
+        back.href = "view.html?S="+backSeason+"&E="+episodesInLastSeasonNum;
         forward.href = rootLink+fowardEpisode+endLink;
         
     }else if(fowardEpisode > episodesInSeasonNum){
         back.href = rootLink+backEpisode+endLink;
-        forward.href = "/doctorwho/view/?S="+fowardSeason+"&E=1";
+        forward.href = "view.html?S="+fowardSeason+"&E=1";
         
     }else{
         back.href = rootLink+backEpisode+endLink;
