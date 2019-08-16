@@ -238,3 +238,12 @@ video{
         height: 210px;
     }
 }
+@media only screen and (max-width: 415px){
+    .show-tile {
+        width: 80%;
+    }
+    .show-tile img {
+        width: 100%;
+        height: auto
+    }
+}
