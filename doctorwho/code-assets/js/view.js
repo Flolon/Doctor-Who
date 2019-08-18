@@ -37,7 +37,11 @@ function loadEpisodePagination(){
     var backEpisode = parseInt(episodeNum) - 1;
     var fowardEpisode = parseInt(episodeNum) + 1;
     var fowardSeason = parseInt(seasonNum) + 1;
-    var backSeason = parseInt(seasonNum) - 1;
+    if(seasonNum == 0){
+        var backSeason = parseInt(seasonNum);
+    }else{
+        var backSeason = parseInt(seasonNum) - 1;  
+    }
     var episodesInLastSeasonNum = Object.keys(episodeJson["S"+backSeason]).length;
     
     var rootLink = "view.html?S="+seasonNum+"&E=";
