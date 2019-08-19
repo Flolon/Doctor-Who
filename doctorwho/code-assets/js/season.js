@@ -16,7 +16,7 @@ function loadSeasonPagination(type = "season"){
         document.getElementById("season-year").innerHTML = episodeJson[S]["E1"]["year"];
     }
     
-    if(backSeason == 0){
+    if(backSeason == -1){
         back.href = rootLink+seasonNum+endLink;
         forward.href = rootLink+fowardSeason+endLink;
         
