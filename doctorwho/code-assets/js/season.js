@@ -1,3 +1,10 @@
+if(seasonNum == 0){
+    var seasonTitle = "Specials (Season "+seasonNum+")";
+}else{
+    var seasonTitle = "Season "+seasonNum;
+}
+document.getElementById("season-title").innerHTML = seasonTitle;
+
 function loadSeasonPagination(type = "season"){
     
     var back = document.getElementById("back-season");
@@ -13,7 +20,11 @@ function loadSeasonPagination(type = "season"){
         rootLink = "view.html?S=";
         endLink = "&E=1";
     }else if(type == "season"){
-        document.getElementById("season-year").innerHTML = episodeJson[S]["E1"]["year"];
+        if(S == "S0"){
+            document.getElementById("season-year").innerHTML = episodeJson[S]["E1"]["year"]+"+";
+        }else{
+            document.getElementById("season-year").innerHTML = episodeJson[S]["E1"]["year"];
+        }
     }
     
     if(backSeason == -1){
@@ -32,5 +43,5 @@ function loadSeasonPagination(type = "season"){
 }
 
 function loadSeasonPageTitle(){
-    document.title = "Doctor Who - Season "+seasonNum;
+    document.title = "Doctor Who - "+seasonTitle;
 }

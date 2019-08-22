@@ -1,5 +1,4 @@
 var episodeGrid = document.getElementById("episode-grid");
-document.getElementById("season-num").innerHTML = seasonNum;
 
 var episodesInSeasonNum = Object.keys(episodeJson[S]).length;
 
