@@ -7,12 +7,12 @@ function loadEpisodeGrid(type){
     for (var i = 1; i < episodesInSeasonNum+1; i++) { 
         var E = "E"+i;
         //episodeGrid.innerHTML += episodeJson.S1[E];
-        var xmas = "";
-        if(episodeJson[S][E]["xmas"] == true){ var xmas = "🎄"; }
+        var badge = "";
+        if(episodeJson[S][E]["badge"] == "xmas"){ var badge = "🎄"; }
         if(type == "wide"){
-            episodeGrid.innerHTML += '<div title="'+episodeJson[S][E]["title"]+'\nYear: '+episodeJson[S][E]["year"]+' '+xmas+'"> <a href="view.html?S='+seasonNum+'&E='+i+'" class="show-wide"> <span class="wide-ep-badge">E'+i+'</span> <img src="code-assets/images/thumbnails/S'+seasonNum+'-E'+i+'.jpg"> <span class="wide-ep-title">'+xmas+''+episodeJson[S][E]["title"]+'</span> </a> </div>';
+            episodeGrid.innerHTML += '<div title="'+episodeJson[S][E]["title"]+'\nYear: '+episodeJson[S][E]["year"]+' '+badge+'"> <a href="view.html?S='+seasonNum+'&E='+i+'" class="show-wide"> <span class="wide-ep-badge">E'+i+'</span> <img src="code-assets/images/thumbnails/S'+seasonNum+'-E'+i+'.jpg"> <span class="wide-ep-title">'+badge+''+episodeJson[S][E]["title"]+'</span> </a> </div>';
         }else{
-            episodeGrid.innerHTML += '<div style="display:inline-block;" title="'+episodeJson[S][E]["title"]+'\nYear: '+episodeJson[S][E]["year"]+' '+xmas+'"> <a href="view.html?S='+seasonNum+'&E='+i+'" class="show-tile"> <span class="ep-badge">E'+i+' '+xmas+'</span> <img src="code-assets/images/thumbnails/S'+seasonNum+'-E'+i+'.jpg"> <span class="title-badge">'+episodeJson[S][E]["title"]+'</span> </a> </div>';
+            episodeGrid.innerHTML += '<div style="display:inline-block;" title="'+episodeJson[S][E]["title"]+'\nYear: '+episodeJson[S][E]["year"]+' '+badge+'"> <a href="view.html?S='+seasonNum+'&E='+i+'" class="show-tile"> <span class="ep-badge">E'+i+' '+badge+'</span> <img src="code-assets/images/thumbnails/S'+seasonNum+'-E'+i+'.jpg"> <span class="title-badge">'+episodeJson[S][E]["title"]+'</span> </a> </div>';
         }
     }
 

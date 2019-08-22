@@ -21,7 +21,9 @@ function loadEpisode(){
     
     episodeInfo = "Season "+seasonNum+" Episode "+episodeNum;
     episodeInfoEle.innerHTML = episodeInfo;
-    episodeYearEle.innerHTML = episodeJson[S][E]["year"];
+    var badge = "";
+    if(episodeJson[S][E]["badge"] == "xmas"){ var badge = "🎄"; }
+    episodeYearEle.innerHTML = episodeJson[S][E]["year"]+" "+badge;
 }
 
 function loadViewPageTitle(){
