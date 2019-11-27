@@ -31,7 +31,7 @@ function loadSeasonPagination(type = "season"){
         back.href = rootLink+seasonNum+endLink;
         forward.href = rootLink+fowardSeason+endLink;
         
-    }else if(fowardSeason > numSeasons){
+    }else if(fowardSeason >= numSeasons){
         back.href = rootLink+backSeason+endLink;
         forward.href = rootLink+seasonNum+endLink;
         

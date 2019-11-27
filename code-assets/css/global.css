@@ -5,10 +5,24 @@
 body{
     min-height: 100vh;
     background-color: #505050;
+    color:white;
+}
+.mb{
+    margin-bottom: .5rem;
+}
+footer{
+    padding: 1rem 0;
+}
+footer a{
+    color:#a3a3a3;
+}
+footer a:hover{
+    color:#b5b5b5;
 }
 .video-container{
-    background-color: #151515;
+    background-color: #0d0d0d;
     width: 100%;
+    max-height: 90vh;
 }
 video{
     outline: none;
@@ -16,7 +30,8 @@ video{
 #episode-video{
     display: block;
     margin-right:auto;
-    margin-left:auto
+    margin-left:auto;
+    max-height: 75vh;
 }
 @media only screen and (max-width: 600px) {
     
@@ -211,9 +226,30 @@ video{
     border-radius: 3px;
     line-height: 0;
 }
+.settings-btn:hover{
+    background-color: #696969;
+}
 .settings-btn i{
     vertical-align: middle;
     font-size: 15px;
+}
+#episode-desc{
+    color: #e6e6e6;
+    margin: .5rem 0 .5rem 0;
+    overflow: scroll;
+    min-height: 45px;
+}
+#more-desc{
+    margin:.5rem 0 .25rem 0;
+    background-color: #717171;
+    padding: 5px 8px;
+    border-radius: 3px;
+    color: #e6e6e6;
+    border: none;
+    outline: 0;
+}
+#more-desc:hover{
+    background-color: #696969;
 }
 
 

@@ -2,6 +2,7 @@ var episodeTitleEle = document.getElementById("episode-title");
 var episodeVideo = document.getElementById("episode-video");
 var episodeInfoEle = document.getElementById("episode-info");
 var episodeYearEle = document.getElementById("episode-year");
+var episodeDesc = document.getElementById("episode-desc");
 
 var episodeNum = getAllUrlParams().E;
 
@@ -24,6 +25,7 @@ function loadEpisode(){
     var badge = "";
     if(episodeJson[S][E]["badge"] == "xmas"){ var badge = "🎄"; }
     episodeYearEle.innerHTML = episodeJson[S][E]["year"]+" "+badge;
+    episodeDesc.innerHTML = episodeJson[S][E]["desc"];
 }
 
 function loadViewPageTitle(){
@@ -63,4 +65,14 @@ function loadEpisodePagination(){
         forward.href = rootLink+fowardEpisode+endLink;
     }
     
+}
+// Description stuff //
+function moreDesc(){
+    if(episodeDesc.style.height == "45px"){
+        episodeDesc.style.height = "auto";
+        document.getElementById("more-desc").innerHTML = "Less";
+    }else if(episodeDesc.style.height == "auto"){
+        episodeDesc.style.height = "45px";
+        document.getElementById("more-desc").innerHTML = "More";
+    }
 }
