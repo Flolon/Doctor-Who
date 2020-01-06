@@ -10,9 +10,9 @@ function loadEpisodeGrid(type){
         var badge = "";
         if(episodeJson[S][E]["badge"] == "xmas"){ var badge = "🎄"; }
         if(type == "wide"){
-            episodeGrid.innerHTML += '<div title="'+episodeJson[S][E]["title"]+'\nYear: '+episodeJson[S][E]["year"]+' '+badge+'"> <a href="view.html?S='+seasonNum+'&E='+i+'" class="show-wide"> <span class="wide-ep-badge">E'+i+'</span> <img src="code-assets/images/thumbnails/S'+seasonNum+'-E'+i+'.jpg"> <span class="wide-ep-title">'+badge+''+episodeJson[S][E]["title"]+'</span> </a> </div>';
+            episodeGrid.innerHTML += '<div title="'+episodeJson[S][E]["title"]+'\nYear: '+episodeJson[S][E]["year"]+' '+badge+'\n'+episodeJson[S][E]["desc"]+'"> <a href="view.html?S='+seasonNum+'&E='+i+'" class="show-wide"> <span class="wide-ep-badge">E'+i+'</span> <img src="code-assets/images/thumbnails/S'+seasonNum+'-E'+i+'.jpg"> <span class="wide-ep-title">'+badge+''+episodeJson[S][E]["title"]+'</span> </a> </div>';
         }else{
-            episodeGrid.innerHTML += '<div style="display:inline-block;" title="'+episodeJson[S][E]["title"]+'\nYear: '+episodeJson[S][E]["year"]+' '+badge+'"> <a href="view.html?S='+seasonNum+'&E='+i+'" class="show-tile"> <span class="ep-badge">E'+i+' '+badge+'</span> <img src="code-assets/images/thumbnails/S'+seasonNum+'-E'+i+'.jpg"> <span class="title-badge">'+episodeJson[S][E]["title"]+'</span> </a> </div>';
+            episodeGrid.innerHTML += '<div style="display:inline-block;" title="'+episodeJson[S][E]["title"]+'\nYear: '+episodeJson[S][E]["year"]+' '+badge+'\n'+episodeJson[S][E]["desc"]+'"> <a href="view.html?S='+seasonNum+'&E='+i+'" class="show-tile"> <span class="ep-badge">E'+i+' '+badge+'</span> <img src="code-assets/images/thumbnails/S'+seasonNum+'-E'+i+'.jpg"> <span class="title-badge">'+episodeJson[S][E]["title"]+'</span> </a> </div>';
         }
     }
 

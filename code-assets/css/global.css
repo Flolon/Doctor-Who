@@ -236,7 +236,7 @@ video{
 #episode-desc{
     color: #e6e6e6;
     margin: .5rem 0 .5rem 0;
-    overflow: scroll;
+    overflow-y: scroll;
     min-height: 45px;
 }
 #more-desc{
